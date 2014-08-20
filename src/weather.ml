@@ -25,7 +25,9 @@ let print_weather weather =
 let print_weather_response response =
   match response.Response_j.weather with
   | [] -> invalid_arg "expected non empty weather list"
-  | head :: _ -> print_weather head
+  | head :: _ ->
+    print_endline response.Response_j.name;
+    print_weather head
 
 let () =
   Command.async_basic
