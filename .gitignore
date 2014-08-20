@@ -2,3 +2,6 @@
 *~
 *.[oa]
 *.cm[aiox]
+*.byte
+*.native
+_build
