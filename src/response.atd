@@ -1,0 +1,51 @@
+type coord = {
+  lon : float;
+  lat : float;
+}
+
+type sys = {
+  sys_type <json name="type"> : int;
+  id : int;
+  message : float;
+  country : string;
+  sunrise : int;
+  sunset : int;
+}
+
+type weather = {
+  id : int;
+  weather_main <json name="main"> : string;
+  description : string;
+  icon : string;
+}
+
+type main = {
+  temp : float;
+  pressure : float;
+  humidity : float;
+  temp_min : float;
+  temp_max : float;
+}
+
+type wind = {
+  speed : float;
+  deg : float;
+}
+
+type clouds = {
+  all : int
+}
+
+type response = {
+  coord : coord;
+  sys : sys;
+  weather : weather list;
+  base : string;
+  main : main;
+  wind : wind;
+  clouds : clouds;
+  dt : int;
+  id : int;
+  name : string;
+  cod : int;
+}
