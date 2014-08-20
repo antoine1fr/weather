@@ -5,5 +5,5 @@ A command-line weather-forecast tool.
 ## Build
 
 ```
-$ ocamlbuild -use-ocamlfind -pkgs uri src/weather.native
+$ corebuild -pkgs uri,cohttp.async,yojson,atdgen src/weather.native
 ```
