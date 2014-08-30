@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/antoine1fr/weather.svg?branch=master)](https://travis-ci.org/antoine1fr/weather)
+
 ```
  _      __         __  __
 | | /| / /__ ___ _/ /_/ /  ___ ____
