@@ -26,5 +26,5 @@ function setup_ubuntu_env
 
 case "$TRAVIS_OS_NAME" in
   linux) setup_ubuntu_env ;;
-  *) echo "Unknown environment: $TRAVIS_OS_NAME"; exit1 ;;
+  *) echo "Unknown environment: $TRAVIS_OS_NAME"; exit 1 ;;
 esac
