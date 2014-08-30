@@ -24,10 +24,7 @@ function setup_ubuntu_env
   # make test
 }
 
-echo "TRAVIS_OS_NAME: $TRAVIS_OS_NAME"
-echo "uname: $(uname)"
-
-case "$TRAVIS_OS_NAME" in
-  linux) setup_ubuntu_env ;;
+case "$(uname)" in
+  Linux) setup_ubuntu_env ;;
   *) echo "Unknown environment: $TRAVIS_OS_NAME"; exit 1 ;;
 esac
