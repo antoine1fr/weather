@@ -1,6 +1,15 @@
 open Core.Std
 open Async.Std
 
+let logo = "
+   _      __         __  __          
+  | | /| / /__ ___ _/ /_/ /  ___ ____
+  | |/ |/ / -_) _ `/ __/ _ \\/ -_) __/
+  |__/|__/\\__/\\_,_/\\__/_//_/\\__/_/
+
+Retrieve weather from openweathermap.org.
+"
+
 let query_uri query =
   let base_uri =
     Uri.of_string "http://api.openweathermap.org/data/2.5/weather" in
@@ -31,7 +40,7 @@ let print_weather_response response =
 
 let () =
   Command.async_basic
-    ~summary:"Retrieve weather from openweathermap.org."
+    ~summary:logo
     Command.Spec.(
       empty
       +> anon (sequence ("place" %: string))
